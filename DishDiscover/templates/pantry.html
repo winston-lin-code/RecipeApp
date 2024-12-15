@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+<h2>ENTER INGREDIENTS!</h2>
+    <div class="container">
+        <form action="/add_item" method="post">
+        <input type="text" id="ingredient" name="item">
+       <button type="submit" Add Item ></button>
+     </div>
+       </form>
+       <ul>
+        {% for item in items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}
